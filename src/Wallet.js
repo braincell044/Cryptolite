@@ -5,6 +5,7 @@ import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
+
 const InvestmentPage = () => {
     const [selectedPlan, setSelectedPlan] = useState(null);
     const [showConfirmation, setShowConfirmation] = useState(false);
@@ -39,7 +40,7 @@ const InvestmentPage = () => {
         try {
             const token = localStorage.getItem("token"); // Get token from local storage
 
-            const res = await axios.post("https://cryptoapi-hkw0.onrender.com/api/auth/deposit", 
+            const res = await axios.post("https://cryptoapi-1-c7wy.onrender.com/api/auth/deposit", 
                 { amount: Number(amount) },
                 { headers: { Authorization: `Bearer ${token}` } }
             );
@@ -98,7 +99,7 @@ const InvestmentPage = () => {
     if (!user) {
       return <div>Loading user data...</div>;
     }
-  
+
     return (
         <div className='dashboard '>
             
@@ -211,6 +212,7 @@ const InvestmentPage = () => {
                     {message && <p className="text-success">{message}</p>}
                 </>
             )}
+      
         </div>
         </div>
     );
