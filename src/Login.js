@@ -17,7 +17,7 @@ export default function Login() {
     e.preventDefault();
     try {
       setLoading(true);
-      const { data } = await axios.post("https://cryptoapi-hazel.vercel.app/api/auth", form);
+      const { data } = await axios.post("https://cryptoapi-1-c7wy.onrender.com/api/auth", form);
       localStorage.setItem("token", data.token);
       navigate("/dashboard"); // Redirect after successful login
     } catch (error) {

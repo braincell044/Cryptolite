@@ -33,7 +33,7 @@ export default function Auth() {
 
     try {
       setLoading(true);
-      const { data } = await axios.post(`https://cryptoapi-hazel.vercel.app${endpoint}`, form);
+      const { data } = await axios.post(`https://cryptoapi-1-c7wy.onrender.com${endpoint}`, form);
       localStorage.setItem("token", data.token);
       navigate("/dashboard");
     } catch (error) {

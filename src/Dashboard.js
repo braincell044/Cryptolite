@@ -31,7 +31,7 @@ export default function Dashboard() {
     }
 
     try {
-      const response = await axios.get("https://cryptoapi-hazel.vercel.app/api/auth/profile", {
+      const response = await axios.get("https://cryptoapi-1-c7wy.onrender.com/api/auth/profile", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

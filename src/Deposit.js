@@ -9,16 +9,21 @@ const Deposit = () => {
         try {
             const token = localStorage.getItem("token"); // Get token from local storage
 
-            const res = await axios.post("https://cryptoapi-hazel.vercel.app/api/auth/deposit", 
+            const res = await axios.post("https://cryptoapi-1-c7wy.onrender.com/api/auth/deposit", 
                 { amount: Number(amount) },
                 { headers: { Authorization: `Bearer ${token}` } }
             );
+            
 
             setMessage(`Deposit successful! New Balance: ${res.data.newBalance}`);
         } catch (error) {
             setMessage(error.response?.data?.message || "Deposit failed.");
         }
+        
     };
+
+
+    
 
     return (
         <div>

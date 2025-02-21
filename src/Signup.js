@@ -20,7 +20,7 @@ export default function Signup() {
     e.preventDefault();
     try {
       setLoading(true);
-      const { data } = await axios.post("https://cryptoapi-hazel.vercel.app/api/user", form);
+      const { data } = await axios.post("https://cryptoapi-1-c7wy.onrender.com/api/user", form);
       localStorage.setItem("token", data.token);
       navigate("/dashboard"); // Redirect after successful signup
     } catch (error) {
