@@ -7,7 +7,7 @@ import Referral from './Referral';
 import HowToUse from './HowToUse'
 import FAQ from './FAQ'
 import ContactUs from './ContactUs'
-import Footer from './Footer'
+
 
 const Combine = () => {
   return (
@@ -21,7 +21,7 @@ const Combine = () => {
 <HowToUse/>
 <FAQ/>
 <ContactUs/>
-<Footer/>
+
 
     </div>
   )

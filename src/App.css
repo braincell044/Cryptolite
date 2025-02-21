@@ -58,6 +58,18 @@ border-radius: 6px;
     background-position: center;
  
    }
+   .dashboard{
+    height: 1100px;/* Full viewport height */
+    background: url('assest//image/cryptoimg.jpg') fixed ;
+    background-size: cover;
+    display: flex;
+    position:relative;
+    justify-content:center;
+    align-items:center;
+    width: 100%;
+    background-position: center;
+ 
+   }
     .spin {
       animation: spin 5s linear infinite;
       border-radius: 70%;
@@ -190,6 +202,7 @@ border-radius: 6px;
   padding: 0px;
   margin: 0px;
   width: 100%;
+  color: #ffffff;
 }
 
 /* Inner frame for the widget */
@@ -198,6 +211,7 @@ border-radius: 6px;
   padding: 0px;
   margin: 0px;
   width: 100%;
+  color: #ffffff;
 }
 
 /* Footer section */
@@ -323,6 +337,70 @@ input[type='submit'] {
     .footer-1{
     width: 100%;
     }
+    
+/* Add this to your CSS */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 100vh; /* Full height */
+  background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent */
+  backdrop-filter: blur(10px); /* Optional: for a glass effect */
+  z-index: 1050; /* Ensure it stays on top */
+  overflow-y: auto; /* Allow scrolling */
+}
+
+/* Menu button at the top */
+.menu-button {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  z-index: 1100;
+  cursor: pointer;
+}
+
+
+
+
+.transition-menu {
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-closed {
+  transform: translateY(-100%);
+}
+
+.menu-open {
+  transform: translateY(0);
+}
+
+
+
+@media (min-width: 992px) {
+  .sidebar {
+      max-width: 250px; /* Adjust as needed */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;
+  }
+}
+
+
+
+    
   
       @keyframes spin {
       from { transform: rotate(0deg); }
@@ -430,4 +508,34 @@ input[type='submit'] {
                         .main-contact{
                         width: 100%;
                         }
+
+   .dashboard{
+    height: 1090px;/* Full viewport height */
+    background: url('assest/image/cryptoimg.jpg') fixed ;
+    background-size: cover;
+    display: flex;
+    position:relative;
+    justify-content:center;
+    align-items:center;
+    width: 100%;
+    background-position: center;
+ 
+ 
+   }
+
+   .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;
+    overflow: hidden;
+  }
+  .hidden{
+    overflow: hidden;
+  }
         }

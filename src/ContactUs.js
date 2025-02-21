@@ -24,7 +24,7 @@ const ContactUs = () => {
   };
 
   return (
-    <section id="Contact">
+    <section id="contact">
       <div className="main-contact">
         <h3 style={{ textAlign: 'center' }}>Contact Us</h3>
         <hr />
