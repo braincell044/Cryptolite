@@ -203,7 +203,7 @@ const InvestmentPage = () => {
             ) : (
                 <>
                     <h4 className="fw-bold">Make a Deposit</h4>
-                    <p>Please send your payments to this wallet address:</p>
+                    <p>Please send your payments to this Bitcoin wallet address:</p>
                     <div className="bg-dark text-white p-2 rounded text-break">
                         <strong>{walletAddress}</strong>
                     </div>

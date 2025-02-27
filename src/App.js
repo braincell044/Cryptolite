@@ -14,11 +14,18 @@ import Home from './Home'
 import Wallet from './Wallet'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-
+import { useEffect } from "react";
 import AdminDashboard from './AdminDashboard';
 import AdminLogin from './LoginAdmin';
-
+import JivoChat from './JoviChat';
 const App = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://code.jivosite.com/widget/6GI5lMt7X4";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
   const location = useLocation();  // Get current route
 
   // Define paths where Header and Footer should be hidden
@@ -44,7 +51,7 @@ const App = () => {
         <Route path='/adminlogin' element={<AdminLogin/>}/>
         <Route path='/wallet' element={<Wallet/>}/>
       </Routes>
-
+<JivoChat/>
       {/* Conditionally render Footer */}
       {!hideHeaderFooter && <Footer />}
     </div>
