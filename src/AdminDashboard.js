@@ -33,7 +33,7 @@ export default function AdminDashboard() {
   const handleApprove = async (id) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.post(`http://localhost:3001/api/deposit/admin/deposit/${id}/approve`, {}, {
+      await axios.post(`https://cryptoapi-1-c7wy.onrender.com/api/deposit/admin/deposit/${id}/approve`, {}, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setPendingDeposits(pendingDeposits.filter(deposit => deposit._id !== id));
@@ -46,7 +46,7 @@ export default function AdminDashboard() {
   const handleReject = async (id) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.post(`http://localhost:3001/api/deposit/admin/deposit/${id}/reject`, {}, {
+      await axios.post(`https://cryptoapi-1-c7wy.onrender.com/api/deposit/admin/deposit/${id}/reject`, {}, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setPendingDeposits(pendingDeposits.filter(deposit => deposit._id !== id));
