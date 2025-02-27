@@ -16,6 +16,7 @@ const InvestmentPage = () => {
     const [user, setUser] = useState(null);
     const [menu, setMenu] = useState(false);
     const navigate = useNavigate();
+    const [dateTime, setDateTime] = useState(new Date());
 
     const investmentPlans = [
         { name: "Standard Plan", profit: "3% After 24 Hours", min: 50, max: 1499 },
@@ -23,6 +24,8 @@ const InvestmentPage = () => {
         { name: "Golden Plan", profit: "7% After 36 Hours", min: 5000, max: 9999 },
         { name: "Pirates Plan", profit: "10% After 48 Hours", min: 10000, max: 500000 }
     ];
+
+    
 
     const handlePlanSelection = (plan) => {
         setSelectedPlan(plan);
@@ -37,19 +40,24 @@ const InvestmentPage = () => {
     };
 
     const handleDepositNow = async () => {
-        try {
-            const token = localStorage.getItem("token"); // Get token from local storage
+      try {
+          const token = localStorage.getItem("token");
+          if (!token) {
+              setMessage("User not authenticated. Please log in.");
+              return;
+          }
 
-            const res = await axios.post("https://cryptoapi-1-c7wy.onrender.com/api/auth/deposit", 
-                { amount: Number(amount) },
-                { headers: { Authorization: `Bearer ${token}` } }
-            );
+          const res = await axios.post("https://cryptoapi-1-c7wy.onrender.com/api/deposit/deposit", 
+              { amount: Number(amount), plan: selectedPlan.name },
+              { headers: { Authorization: `Bearer ${token}` } }
+          );
 
-            setMessage(`Deposit successful! New Balance: ${res.data.newBalance}`);
-        } catch (error) {
-            setMessage(error.response?.data?.message || "Deposit failed.");
-        }
-    };
+          setMessage(res.data.message || "Deposit request sent successfully. Await admin approval.");
+          setShowConfirmation(false);
+      } catch (error) {
+          setMessage(error.response?.data?.message || "Deposit request failed.");
+      }
+  };
 
   
     // Fetch user details function (wrapped in useCallback)
@@ -91,6 +99,13 @@ const InvestmentPage = () => {
     };
   
     const handleMenu = () => setMenu(!menu);
+      // Update date & time every second
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setDateTime(new Date());
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
   
     if (!isAuthenticated) {
       return <div>Redirecting to login...</div>;
@@ -101,7 +116,7 @@ const InvestmentPage = () => {
     }
 
     return (
-        <div className='dashboard '>
+        <div className='dashboard-wall '>
             
      
 
@@ -131,12 +146,12 @@ const InvestmentPage = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/profile" className="nav-link text-light">
+              <Link to="/adminlogin" className="nav-link text-light">
                 <FaUserCircle className="me-2" /> Profile
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/settings" className="nav-link text-light">
+              <Link to="/admindashboard" className="nav-link text-light">
                 <FaCog className="me-2" /> Settings
               </Link>
             </li>
@@ -150,19 +165,24 @@ const InvestmentPage = () => {
 
   
       
-        <div className="container  mt-5 text-white" style={{ maxWidth: '600px',  padding: '20px', borderRadius: '10px' }}>
+        <div className="container  mt-1 text-white" style={{ maxWidth: '600px',  padding: '20px', borderRadius: '10px' }}>
             
             {!showConfirmation ? (
                 <>
-                    <div className="py-3 px-2 d-flex hidden justify-content-between align-items-center">
+                    <div className="py-1  d-flex hidden justify-content-between align-items-center">
               <Link to="/" className="nav-link">
-                <h1 className="head-1 mx-1">
+                <h1 className="head-1">
                   cryptolite<span className="intro">trade</span>
                 </h1>
               </Link>
+
               <i className="bx bx-menu fs-1 text-light " onClick={handleMenu}></i>
             </div>
-               <p>Select Investment Plan</p>
+            <div className="text-light d-flex  pb-3">
+            <h6>{dateTime.toLocaleDateString()}</h6>,
+            <h6>{dateTime.toLocaleTimeString()}</h6>
+          </div>
+               <h4 className="text-center fw-bold py-4">Select Investment Plan</h4>
                 
                     {investmentPlans.map((plan, index) => (
                         <div key={index} className="p-3 my-3 border rounded" style={{ cursor: 'pointer', backgroundColor: '#121212' }} onClick={() => handlePlanSelection(plan)}>

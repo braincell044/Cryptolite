@@ -2,8 +2,9 @@ import { useState, useEffect, useCallback } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaChartLine, FaWallet, FaUserCircle, FaCog, FaSignOutAlt } from "react-icons/fa";
 import axios from "axios";
-// import SecurityInfo from "./SecurityInfo";
 import CryptoWidget from "./CryptoWidget";
+
+
 
 
 export default function Dashboard() {
@@ -62,7 +63,7 @@ export default function Dashboard() {
   const handleMenu = () => setMenu(!menu);
 
   if (!isAuthenticated) {
-    return <div>Redirecting to login...</div>;
+    return <div>Loading user data...</div>;
   }
 
   if (!user) {
@@ -100,12 +101,12 @@ export default function Dashboard() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/profile" className="nav-link text-light">
+              <Link to="/adminlogin" className="nav-link text-light">
                 <FaUserCircle className="me-2" /> Profile
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/settings" className="nav-link text-light">
+              <Link to="/admindashboard" className="nav-link text-light">
                 <FaCog className="me-2" /> Settings
               </Link>
             </li>
@@ -118,8 +119,8 @@ export default function Dashboard() {
         </nav>
 
         {/* Main Content */}
-        <main className="col-md-12  col-lg-12">
-        <div className="py-3 px-5 d-flex hidden justify-content-between align-items-center">
+        <main className=" col-md-12  col-lg-12">
+        <div className="py-3 px-1  d-flex hidden justify-content-between align-items-center">
               <Link to="/" className="nav-link">
                 <h1 className="head-1 mx-1">
                   cryptolite<span className="intro">trade</span>
@@ -127,14 +128,14 @@ export default function Dashboard() {
               </Link>
               <i className="bx bx-menu fs-1 text-light " onClick={handleMenu}></i>
             </div>
-            <div className="text-light d-flex px-5 pb-3">
-            <h6>{dateTime.toLocaleDateString()}</h6>,
-            <h6>{dateTime.toLocaleTimeString()}</h6>
+            <div className="text-light pb-4 px-1">
+            <h6 className="">{dateTime.toLocaleDateString()}</h6>
+            <h6 className="">{dateTime.toLocaleTimeString()}</h6>
           </div>
 
           {/* User Account Info */}
           <div className="row g-4 justify-content-center">
-            <div className="col-md-4">
+            <div className=" col-md-4 col-sm-6">
               <div className="card bg-dark text-light p-3">
                 <h5>Account Balance</h5>
                 <h3 className="text-success">${user.balance || "0.00"}</h3>
@@ -143,15 +144,17 @@ export default function Dashboard() {
               </div>
             </div>
 
-            <div className="col-md-3">
+            <div className="col-6 col-md-3 col-sm-3">
               <div className="card bg-dark text-light p-3">
                 <h5>Active Deposits</h5>
                 <h3 className="text-info">$1000.00</h3>
+                <p>Last Withdrawal: $0.00</p>
                 <p>Pending Deposits: $0.00</p>
                 <p>Total Deposited: $0.00</p>
               </div>
             </div>
-            <div className="col-md-3">
+
+            <div className=" col-6 col-md-3 col-sm-3">
               <div className="card bg-dark text-light p-3">
                 <h5>Earnings</h5>
                 <h3 className="text-warning">$50.00</h3>
@@ -160,26 +163,25 @@ export default function Dashboard() {
                 <p>Total Withdrawal: $0.00</p>
               </div>
             </div>
+         
 
-     <div className="w-50 displayhide ">
-     <CryptoWidget />
+     <div className="col-12  col-md-10 col-sm-12  ">
+      <CryptoWidget/>
+    
      </div>
-            <div className="col-md-4 displayhide">
+            {/* <div className="col-md-4 ">
               <div className="card bg-dark text-light p-3">
                 <h5>Security / Login</h5>
                 <p>2 Factor Authentication: May-13-2024</p>
                 <p>Last Login: Aug-7-2024, 12:12 AM</p>
                 <p>Operating System: Windows 10</p>
               </div>
-            </div> 
+            </div>  */}
             </div>
 
             
-        {/* <div className="mt-4 p-3 bg-dark text-light rounded">
-            <h5>Recent Activity</h5>
-            <p>No recent transactions.</p>
-          </div> */}
-         
+     
+    
 
         </main>
       </div>

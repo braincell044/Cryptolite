@@ -15,11 +15,14 @@ import Wallet from './Wallet'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
+import AdminDashboard from './AdminDashboard';
+import AdminLogin from './LoginAdmin';
+
 const App = () => {
   const location = useLocation();  // Get current route
 
   // Define paths where Header and Footer should be hidden
-  const hideHeaderFooter = ['/dashboard', '/login', '/signup', '/wallet'].includes(location.pathname);
+  const hideHeaderFooter = ['/dashboard', '/login', '/signup', '/wallet',  '/admin/dashboard', '/adminlogin' ].includes(location.pathname);
 
   return (
     <div className='app'>
@@ -37,6 +40,8 @@ const App = () => {
         <Route path='/signup' element={<Signup />} />
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='*' element={<h1>Page not found</h1>} />
+        <Route path='/admin/dashboard' element={<AdminDashboard/>}/>
+        <Route path='/adminlogin' element={<AdminLogin/>}/>
         <Route path='/wallet' element={<Wallet/>}/>
       </Routes>
 
@@ -47,3 +52,9 @@ const App = () => {
 };
 
 export default App;
+
+
+
+
+
+

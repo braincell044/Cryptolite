@@ -375,6 +375,20 @@ input[type='submit'] {
   transform: translateY(0);
 }
 
+.dashboard-wall{
+  height: 1050px;/* Full viewport height */
+  background: url('assest/image/cryptoimg.jpg') fixed ;
+  background-size: cover;
+  display: flex;
+  position:relative;
+  justify-content:center;
+  align-items:center;
+  width: 100%;
+  background-position: center;
+
+
+ }
+
 
 
 @media (min-width: 992px) {
@@ -510,7 +524,7 @@ input[type='submit'] {
                         }
 
    .dashboard{
-    height: 1090px;/* Full viewport height */
+    height: 1250px;/* Full viewport height */
     background: url('assest/image/cryptoimg.jpg') fixed ;
     background-size: cover;
     display: flex;
@@ -520,6 +534,31 @@ input[type='submit'] {
     width: 100%;
     background-position: center;
  
+ 
+   }
+   .dashboard-wall{
+    height: 1050px;/* Full viewport height */
+    background: url('assest/image/cryptoimg.jpg') fixed ;
+    background-size: cover;
+    display: flex;
+    position:relative;
+    justify-content:center;
+    align-items:center;
+    width: 100%;
+    background-position: center;
+ 
+ 
+   }
+   .home{
+    height: 750px;/* Full viewport height */
+    background: url('assest//image/cryptoimg.jpg') fixed ;
+    background-size: cover;
+    display: flex;
+    position:relative;
+    justify-content:center;
+    align-items:center;
+    width: 100%;
+    background-position: center;
  
    }
 

@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -31,10 +32,10 @@ export default function Login() {
     <div className="d-flex align-items-center justify-content-center vh-100 bg-dark">
       <div className="modal-dialog modal-dialog-centered">
         <div className="modal-content bg-dark text-light p-4 rounded">
-          <button
+         <Link to='/'> <button
             type="button"
             className="btn-close btn-close-white position-absolute top-0 end-0 m-3"
-          ></button>
+          ></button></Link>
 
           {/* Logo */}
           <div className="text-center mb-3">
@@ -91,3 +92,6 @@ export default function Login() {
     </div>
   );
 }
+
+
+//https://cryptoapi-1-c7wy.onrender.com

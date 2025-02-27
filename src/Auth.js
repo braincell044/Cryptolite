@@ -1,9 +1,7 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Make sure this is imported
 import axios from "axios";
-
-
 import "./App.css";
-
 
 export default function Auth() {
   const [form, setForm] = useState({ name: "", email: "", password: "" });
@@ -25,7 +23,6 @@ export default function Auth() {
     e.preventDefault();
     const endpoint = isLogin ? "/api/auth" : "/api/users";
 
-    // Validate form fields
     if (isLogin && (!form.email || !form.password)) {
       alert("Email and password are required!");
       return;
@@ -34,8 +31,15 @@ export default function Auth() {
     try {
       setLoading(true);
       const { data } = await axios.post(`https://cryptoapi-1-c7wy.onrender.com${endpoint}`, form);
+      
       localStorage.setItem("token", data.token);
-      navigate("/dashboard");
+      
+      if (data.isAdmin) {
+        navigate("/admindashboard"); // Redirect Admin Users
+      } else {
+        navigate("/dashboard"); // Redirect Normal Users
+      }
+
     } catch (error) {
       console.error(error.response?.data || "An error occurred");
       alert(error.response?.data?.message || "An error occurred");
@@ -46,7 +50,6 @@ export default function Auth() {
 
   return (
     <div>
- 
       <div className="min-h-screen flex items-center justify-center text-center bg-white">
         <form onSubmit={handleSubmit} className="p-8 bg-white rounded-lg">
           <h2 className="text-2xl mb-4 text-center">{isLogin ? "Login" : "Sign Up"}</h2>
@@ -95,7 +98,6 @@ export default function Auth() {
           </p>
         </form>
       </div>
-    
     </div>
   );
 }

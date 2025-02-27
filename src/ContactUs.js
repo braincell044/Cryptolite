@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Profile from './assest/image/Screenshot 2025-02-10 at 11.44.18.png'
 
+
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -22,6 +23,20 @@ const ContactUs = () => {
     e.preventDefault();
     console.log(formData);
   };
+
+  fetch("http://localhost:3001/api/send-email", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+        to: "recipient@example.com",
+        subject: "Hello!",
+        message: "This is a test email from SES."
+    })
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error("Error:", error));
+
 
   return (
     <section id="contact">
@@ -100,6 +115,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
+     
     </section>
   );
 };
