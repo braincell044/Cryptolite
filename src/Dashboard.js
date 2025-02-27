@@ -106,7 +106,7 @@ export default function Dashboard() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/admindashboard" className="nav-link text-light">
+              <Link to="/admin/dashboard" className="nav-link text-light">
                 <FaCog className="me-2" /> Settings
               </Link>
             </li>
@@ -147,7 +147,7 @@ export default function Dashboard() {
             <div className="col-6 col-md-3 col-sm-3">
               <div className="card bg-dark text-light p-3">
                 <h5>Active Deposits</h5>
-                <h3 className="text-info">$1000.00</h3>
+                <h3 className="text-info">$0.00</h3>
                 <p>Last Withdrawal: $0.00</p>
                 <p>Pending Deposits: $0.00</p>
                 <p>Total Deposited: $0.00</p>
@@ -157,7 +157,7 @@ export default function Dashboard() {
             <div className=" col-6 col-md-3 col-sm-3">
               <div className="card bg-dark text-light p-3">
                 <h5>Earnings</h5>
-                <h3 className="text-warning">$50.00</h3>
+                <h3 className="text-warning">$0.00</h3>
                 <p>Last Withdrawal: $0.00</p>
                 <p>Pending Withdrawal: $0.00</p>
                 <p>Total Withdrawal: $0.00</p>
