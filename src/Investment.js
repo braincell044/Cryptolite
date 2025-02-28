@@ -25,7 +25,7 @@ const Investment = () => {
               <li>Deposit return after 24 hours</li>
               <li>Cancel deposit at any time</li>
               <li className="grey">
-                <Link to="/" className="button3">Invest now</Link>
+                <Link to="/wallet" className="button3">Invest now</Link>
               </li>
             </ul>
           </div>
@@ -41,7 +41,7 @@ const Investment = () => {
               <li>Deposit return after 24 hours</li>
               <li>Cancel deposit at any time</li>
               <li className="grey">
-                <Link to="/" className="button3">Invest now</Link>
+                <Link to="/wallet" className="button3">Invest now</Link>
               </li>
             </ul>
           </div>
@@ -57,7 +57,7 @@ const Investment = () => {
               <li>Deposit return after 36 hours</li>
               <li>Cancel deposit at any time</li>
               <li className="grey">
-                <Link to="/" className="button3">Invest now</Link>
+                <Link to="/wallet" className="button3">Invest now</Link>
               </li>
             </ul>
           </div>
@@ -73,7 +73,7 @@ const Investment = () => {
               <li>Deposit return after 48 hours</li>
               <li>Cancel deposit at any time</li>
               <li className="grey">
-                <Link to="/" className="button3">Invest now</Link>
+                <Link to="/wallet" className="button3">Invest now</Link>
               </li>
             </ul>
           </div>

@@ -350,7 +350,11 @@ input[type='submit'] {
   z-index: 1050; /* Ensure it stays on top */
   overflow-y: auto; /* Allow scrolling */
 }
-
+.admin-back{
+  background-color: rgba(0, 0, 0, 0.6); 
+  backdrop-filter: blur(100px); /* Optional: for a glass effect */
+  color:cornsilk;
+}
 /* Menu button at the top */
 .menu-button {
   position: relative;
@@ -390,7 +394,34 @@ input[type='submit'] {
  }
 
 
+.circle {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background-color: rgb(53, 176, 176);
+  box-shadow: 0 0 20px rgb(53, 176, 176);
+  animation: spin 2s linear infinite, glow 1.5s ease-in-out infinite;
+}
 
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+      box-shadow: 0 0 25px rgb(53, 176, 176);
+  }
+  50% {
+      box-shadow: 0 0 60px rgb(53, 176, 176);
+  }
+}
+
+ 
 @media (min-width: 992px) {
   .sidebar {
       max-width: 250px; /* Adjust as needed */
@@ -416,10 +447,7 @@ input[type='submit'] {
 
     
   
-      @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-      }
+    
 
       @media (min-width:760px) and (max-width:1030px){
         .spin1{

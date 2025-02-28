@@ -57,7 +57,7 @@ export default function AdminDashboard() {
   };
 
   return (
-    <div className="p-6 ">
+    <div className="p-6 admin-back px-5 py-5">
       <h1 className="text-2xl font-bold mb-4">Admin Dashboard</h1>
       {error && <p className="text-red-500">{error}</p>}
 
@@ -92,7 +92,7 @@ export default function AdminDashboard() {
       ) : (
         <ul className="space-y-4 ">
           {pendingDeposits.map((deposit) => (
-            <li key={deposit._id} className="border p-4 flex justify-between items-center bg-gray-100 rounded-md">
+            <li key={deposit._id} className="border p-4 flex justify-between items-center  rounded-md">
               <div>
                 <p className="font-semibold">Amount: {deposit.amount}</p>
                 <p className="text-sm text-gray-500">Plan: {deposit.plan}</p>
