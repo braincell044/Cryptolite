@@ -26,7 +26,7 @@ const Home = () => {
 <h2 className='invest'>Advanced Assest Management.</h2>
 <p className='invest'>use our investment plan and get up to 12% return in 24 hours</p>
 <p className='invest-2' >Cancel your deposit at any time</p>
-      <Link to="/Signup"><button className='btn reg link-1 mx-1'>Regester an accout</button></Link>
+      <Link to="/Signup"><button className='btn reg link-1 mx-1'>Register an accout</button></Link>
       <Link to="/Login"><button className='btn sign-2 link-1'>sign in</button></Link>
 </div>
 

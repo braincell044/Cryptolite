@@ -9,7 +9,7 @@ import './App.css';
 const InvestmentPage = () => {
     const [selectedPlan, setSelectedPlan] = useState(null);
     const [showConfirmation, setShowConfirmation] = useState(false);
-    const walletAddress = "17K8yXFer49JCRQAUV1iyB1q2QBFn73GM";
+    const walletAddress = "1L7jtDVgmKk2fyuCaxURCBp3Medv4HTEAJ";
     const [amount, setAmount] = useState("");
     const [message, setMessage] = useState("");
     const [isAuthenticated, setIsAuthenticated] = useState(null);
@@ -19,10 +19,10 @@ const InvestmentPage = () => {
     const [dateTime, setDateTime] = useState(new Date());
 
     const investmentPlans = [
-        { name: "Standard Plan", profit: "3% After 24 Hours", min: 50, max: 1499 },
-        { name: "Premium Plan", profit: "5% After 24 Hours", min: 1500, max: 4999 },
-        { name: "Golden Plan", profit: "7% After 36 Hours", min: 5000, max: 9999 },
-        { name: "Pirates Plan", profit: "10% After 48 Hours", min: 10000, max: 500000 }
+        { name: "Standard Plan", profit: "5% After 24 Hours", min: 100, max: 1499 },
+        { name: "Premium Plan", profit: "7% After 24 Hours", min: 1500, max: 4999 },
+        { name: "Golden Plan", profit: "10% After 36 Hours", min: 5000, max: 9999 },
+        { name: "Pirates Plan", profit: "15% After 48 Hours", min: 10000, max: 500000 }
     ];
 
     
@@ -52,7 +52,7 @@ const InvestmentPage = () => {
               { headers: { Authorization: `Bearer ${token}` } }
           );
 
-          setMessage(res.data.message || "Deposit request sent successfully. Await admin approval.");
+          setMessage(res.data.message || "Balance will be updated as soon as the deposit has been processed.");
           setShowConfirmation(false);
       } catch (error) {
           setMessage(error.response?.data?.message || "Deposit request failed.");
