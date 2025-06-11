@@ -1,0 +1,608 @@
+.intro{
+  background-color: rgb(53, 176, 176);
+  font-size: 20px;
+border-radius: 6px;
+  }
+  .head-1{
+    color: aliceblue;
+    font-size: 30px;
+  }
+  .navbar-content{
+    padding:1% 1% 1% 1% !important;
+    width: 100%;
+    background-color: #242323 ;
+    color: #ffffff;
+
+ 
+    
+    }
+    .reg {
+      border-color: black;
+      color: white !important;
+      background-color: rgb(4, 171, 171) !important;
+      }
+      .reg:hover {
+      background-color: rgba(60, 176, 176) !important;
+      color: white !important;
+      }
+      .sign-2 {
+        border-color: white;
+        color: white;
+        background-color: rgb(0, 0, 0, 0.1);
+        
+        }
+        .sign-2:hover {
+        background-color: white;
+        color: black;
+        border: 1px solid white;
+        }
+        .link-1{
+          font-weight:500 !important;
+        }
+   
+     .flex-toggle{
+      display: flex;
+     }
+   .displaynone{
+    display: none;
+   }
+   .home{
+    height: 815px;/* Full viewport height */
+    background: url('assest//image/cryptoimg.jpg') fixed ;
+    background-size: cover;
+    display: flex;
+    position:relative;
+    justify-content:center;
+    align-items:center;
+    width: 100%;
+    background-position: center;
+ 
+   }
+   .dashboard{
+    height: 1100px;/* Full viewport height */
+    background: url('assest//image/cryptoimg.jpg') fixed ;
+    background-size: cover;
+    display: flex;
+    position:relative;
+    justify-content:center;
+    align-items:center;
+    width: 100%;
+    background-position: center;
+ 
+   }
+    .spin {
+      animation: spin 5s linear infinite;
+      border-radius: 70%;
+      }
+      .crypto{
+        color: rgb(53, 176, 176);
+        font-size: 70px;
+      }
+      .invest{
+        color: #ffffff;
+        font-size: 18px;
+      }
+      .invest-2{
+        font-size: 16px;
+        color: #ffffff;
+
+      }
+      hr{
+        border-style: 15px;
+        border-color: black;
+        border-width:2px 0 0 0 ;
+        height: 1px;
+        width: 40px;
+        margin: 1% 0 4% 48%;
+        }
+        .about{
+        margin: 0;
+   
+         
+          
+        }
+        .app{
+          background-color: #b4b4b4;
+        }
+        .about-4{
+        width:100% ;
+        text-align: start;
+        }
+        .about-con{
+        width: 100%;
+        display: flex;
+        margin: 0;
+        }
+        .about-1{
+        width: 50%;
+        }
+        .about-2{
+        width: 100%;
+        height: 70%;
+        }
+        iframe{
+        width: 100%;
+        height: 100%;
+        }
+        .space{
+          word-spacing: 5px;
+        }
+        .wall{
+          background-image: url('./assest/image/pablowall.jpg') ;
+          }
+          .tro{
+          color:rgb(4, 171, 171);
+          }
+          h1 {
+            color: aliceblue;
+            }
+            .margin-invest{
+              margin: 30px;
+            }
+            .premium{
+              background-color:#00acac !important;
+            }
+
+.columns {
+  float: left;
+  width: 33.3%;
+  padding: 8px;
+  }
+  .price {
+  list-style-type: none;
+  border: 1px solid #ccc;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #cccccc;
+  }
+  .price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+  }
+  .price .header-1 {
+  background-color: #1c1f24;
+  color: white;
+  font-size: 25px;
+  }
+  .price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+  }
+  .price .grey {
+  background-color: #2c353c;
+  font-size: 20px;
+  color: white;
+  }
+  .button3 {
+  background-color: #00acac;
+  border: none;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  }
+
+  /* Container for the crypto widget */
+.crypto-container {
+  height: 433px;
+  background-color: #ffffff;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 1px solid #56667f;
+  border-radius: 4px;
+  text-align: right;
+  line-height: 14px;
+  font-size: 12px;
+  font-feature-settings: normal;
+  text-size-adjust: 100%;
+  box-shadow: inset 0 -20px 0 0 #56667f;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  color: #ffffff;
+}
+
+/* Inner frame for the widget */
+.crypto-frame {
+  height: 413px;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  color: #ffffff;
+}
+
+/* Footer section */
+.footer {
+  color: #ffffff;
+  line-height: 14px;
+  font-weight: 400;
+  font-size: 11px;
+  box-sizing: border-box;
+  padding: 2px 6px;
+  width: 100%;
+  font-family: Verdana, Tahoma, Arial, sans-serif;
+}
+
+/* Footer link style */
+.footer-link {
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 11px;
+}
+
+/* Style for each feature box */
+.box {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.box p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* You may want to apply custom styles to the icon container */
+.large-icon {
+  color: #56667f;
+}
+
+
+.ref1{
+  background-color: black;
+  color:#00acac;
+  width:100px;
+  text-align: center;
+  border-radius: 8px;
+  margin-left: 35%;
+  }
+  .best-wall{
+  background-image: url('assest/image/trynow.jpeg');
+  background-size: cover;
+  background-position: bottom;
+  height: auto;
+  width: 100%;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  color: rgb(180,180,180,255);
+  background-attachment: scroll;
+  }
+  .ref2-div{
+  width: 50%;
+  }
+  .take-am{width: 100%;}
+  
+
+  .faq{
+    width: 100%;
+    display: flex;
+    background-image: url('assest/image/faqss.jpg');
+    background-size: cover;
+    background-position: bottom;
+    color:rgb(180,180,180,255) ;
+    height: auto;
+    background-repeat: repeat;
+    }
+
+input[type='submit'] {
+  background-color:rgb(4, 171, 171);
+  border: none;
+  border-radius: 10px;
+  padding: 15px 15px;
+  font-weight: bold;
+  color: black;
+  margin: 15px 0 20px 75px !important;
+  width:300px
+  }
+  input[type='text'], input[type='email'] {
+  border: 1px solid #2F5A78;
+  width: 300px;
+  padding: 15px;
+  margin:0;
+  background-color: #cccccc;
+  
+  }
+  textarea {
+  border: 1px solid #2F5A78;
+  width: 300px;
+  padding: 60px;
+  margin:0;
+  background-color: #cccccc;
+  }
+  
+  
+  .contact-1{
+  width: 100%;
+  }
+  .form-1{
+  width: 100%;
+  }
+  .main-contact{
+  width: 100%;
+  }
+  footer{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34,40,45,255);
+    text-align: center;
+    padding: 70px;
+    color: #ccc;
+    }
+    .footer-1{
+    width: 100%;
+    }
+    
+/* Add this to your CSS */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 100vh; /* Full height */
+  background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent */
+  backdrop-filter: blur(10px); /* Optional: for a glass effect */
+  z-index: 1050; /* Ensure it stays on top */
+  overflow-y: auto; /* Allow scrolling */
+}
+.admin-back{
+  background-color: rgba(0, 0, 0, 0.6); 
+  backdrop-filter: blur(100px); /* Optional: for a glass effect */
+  color:cornsilk;
+}
+/* Menu button at the top */
+.menu-button {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  z-index: 1100;
+  cursor: pointer;
+}
+
+
+
+
+.transition-menu {
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-closed {
+  transform: translateY(-100%);
+}
+
+.menu-open {
+  transform: translateY(0);
+}
+
+.dashboard-wall{
+  height: 1050px;/* Full viewport height */
+  background: url('assest/image/cryptoimg.jpg') fixed ;
+  background-size: cover;
+  display: flex;
+  position:relative;
+  justify-content:center;
+  align-items:center;
+  width: 100%;
+  background-position: center;
+
+
+ }
+
+
+.circle {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background-color: rgb(53, 176, 176);
+  box-shadow: 0 0 20px rgb(53, 176, 176);
+  animation: spin 2s linear infinite, glow 1.5s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+      box-shadow: 0 0 25px rgb(53, 176, 176);
+  }
+  50% {
+      box-shadow: 0 0 60px rgb(53, 176, 176);
+  }
+}
+
+ 
+@media (min-width: 992px) {
+  .sidebar {
+      max-width: 250px; /* Adjust as needed */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;
+  }
+}
+
+
+
+    
+  
+    
+
+      @media (min-width:760px) and (max-width:1030px){
+        .spin1{
+        width: 100%;
+        }
+        .intro{
+        color: rgb(53, 176, 176);
+        font-size: 40px;
+        }
+        .short{
+        width: 100%;
+        }
+        .about-con{
+        flex-direction: column;
+        width: 100%;
+        }
+        .about-1{
+        width: 100%;
+        }
+        .displayhide{
+          display: none !important;
+         }
+  
+         .displaynone{
+          display: block;
+         }
+      }
+        @media (max-width:600px) {
+          .displayhide{
+            display: none !important;
+           }
+    
+           .displaynone{
+            display: block;
+           }
+           .crypto{
+            color: rgb(53, 176, 176);
+            font-size: 40px;
+          }
+
+          .about-con{
+            flex-direction: column;
+            width: 100%;
+            }
+            .about-4{
+              width:100% ;
+              text-align: center;
+              }
+              .about-1{
+                width: 100%;
+                }
+                .columns {
+                  float: left;
+                  width:100%;
+                  padding: 8px;
+                  flex-direction: column;
+                  }
+                  .ref2-div{
+                    width: 100%;
+                    }
+                    .best-wall{
+                    width: 100%;
+                    }
+
+                    input[type='submit'] {
+                      background-color:rgb(4, 171, 171);
+                      border: none;
+                      border-radius: 10px;
+                      padding: 15px 15px;
+                      font-weight: bold;
+                      color: black;
+                      margin: 10px  !important;
+                      width:250px
+                      }
+                      input[type='text'], input[type='email'] {
+                      border: 1px solid #2F5A78;
+                      width: 250px;
+                      padding: 15px;
+                      margin:0;
+                      background-color: #cccccc;
+                      
+                      }
+                      textarea {
+                      border: 1px solid #2F5A78;
+                      width: 250px;
+                      padding: 60px;
+                      margin:0;
+                      background-color: #cccccc;
+                      }
+                      .margin-hero{
+                        margin: 0 !important;
+                   
+                      }
+                      .contact-1{
+                        width: 100%;
+                        }
+                        .form-1{
+                        width: 60%;
+                        }
+                        .main-contact{
+                        width: 100%;
+                        }
+
+   .dashboard{
+    height: 1250px;/* Full viewport height */
+    background: url('assest/image/cryptoimg.jpg') fixed ;
+    background-size: cover;
+    display: flex;
+    position:relative;
+    justify-content:center;
+    align-items:center;
+    width: 100%;
+    background-position: center;
+ 
+ 
+   }
+   .dashboard-wall{
+    height: 1050px;/* Full viewport height */
+    background: url('assest/image/cryptoimg.jpg') fixed ;
+    background-size: cover;
+    display: flex;
+    position:relative;
+    justify-content:center;
+    align-items:center;
+    width: 100%;
+    background-position: center;
+ 
+ 
+   }
+   .home{
+    height: 750px;/* Full viewport height */
+    background: url('assest//image/cryptoimg.jpg') fixed ;
+    background-size: cover;
+    display: flex;
+    position:relative;
+    justify-content:center;
+    align-items:center;
+    width: 100%;
+    background-position: center;
+ 
+   }
+
+   .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;
+    overflow: hidden;
+  }
+  .hidden{
+    overflow: hidden;
+  }
+        }
